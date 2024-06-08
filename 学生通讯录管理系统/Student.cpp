@@ -1,56 +1,56 @@
-#include"student.h";
+ï»¿#include"student.h";
 #include<string>
 using namespace std;
 Student::Student() {
 
 }
-
+//
 void Student::Show_Menu() {
 	cout << "*********************************************" << endl;
-	cout << "              Ñ§ÉúÍ¨Ñ¶Â¼¹ÜÀíÏµÍ³              " << endl;
-	cout << " ÇëÑ¡ÔñÒª½øÐÐµÄ²Ù×÷                           " << endl;
-	cout << " 1. Ìí¼ÓÐÂÑ§ÉúÐÅÏ¢                            " << endl;
-	cout << " 2. ²éÑ¯Ñ§ÉúÐÅÏ¢                              " << endl;
-	cout << " 3. ÐÞ¸ÄÑ§ÉúÐÅÏ¢                              " << endl;
-	cout << " 4. É¾³ýÑ§ÉúÐÅÏ¢                              " << endl;
-	cout << " 5. ÏÔÊ¾Í¨Ñ¶Â¼ÖÐµÄËùÓÐÐÅÏ¢                     " << endl;
-	cout << " 6. ÍË³öÏµÍ³                                  " << endl;
+	cout << "              å­¦ç”Ÿé€šè®¯å½•ç®¡ç†ç³»ç»Ÿ              " << endl;
+	cout << " è¯·é€‰æ‹©è¦è¿›è¡Œçš„æ“ä½œ                           " << endl;
+	cout << " 1. æ·»åŠ æ–°å­¦ç”Ÿä¿¡æ¯                            " << endl;
+	cout << " 2. æŸ¥è¯¢å­¦ç”Ÿä¿¡æ¯                              " << endl;
+	cout << " 3. ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯                              " << endl;
+	cout << " 4. åˆ é™¤å­¦ç”Ÿä¿¡æ¯                              " << endl;
+	cout << " 5. æ˜¾ç¤ºé€šè®¯å½•ä¸­çš„æ‰€æœ‰ä¿¡æ¯                     " << endl;
+	cout << " 6. é€€å‡ºç³»ç»Ÿ                                  " << endl;
 	cout << "*********************************************" << endl;
 	cout << endl;
 }
 
 void Student::Add_student() {
-	cout << "ÇëÊäÈëÌí¼ÓÑ§ÉúµÄÐÕÃû" << endl;
+	cout << "è¯·è¾“å…¥æ·»åŠ å­¦ç”Ÿçš„å§“å" << endl;
 	//string st_name;
 	cin >> st_name[1];
 
-	cout << "ÇëÊäÈëÌí¼ÓÑ§ÉúµÄÐÔ±ð" << endl;
+	cout << "è¯·è¾“å…¥æ·»åŠ å­¦ç”Ÿçš„æ€§åˆ«" << endl;
 	string st_sex;
 	cin >> st_sex;
-	if (st_sex != "ÄÐ" && st_sex != "Å®") {
-		cout << "ÊäÈëÓÐÎó" << endl;
+	if (st_sex != "ç”·" && st_sex != "å¥³") {
+		cout << "è¾“å…¥æœ‰è¯¯" << endl;
 		system("pause");
 		system("cls");
 		return;
 	}
 
-	cout << "ÇëÊäÈëÌí¼ÓÑ§ÉúµÄ³öÉúÈÕÆÚ" << endl;
+	cout << "è¯·è¾“å…¥æ·»åŠ å­¦ç”Ÿçš„å‡ºç”Ÿæ—¥æœŸ" << endl;
 	string st_year, st_month, st_day;
 	cin >> st_year >> st_month >> st_day;
 	
-	cout << "ÇëÊäÈëÌí¼ÓÑ§ÉúµÄ¹¤×÷µ¥Î»" << endl;
+	cout << "è¯·è¾“å…¥æ·»åŠ å­¦ç”Ÿçš„å·¥ä½œå•ä½" << endl;
 	string st_job;
 	cin >> st_job;
 
-	cout << "ÇëÊäÈëÌí¼ÓÑ§ÉúµÄ¼®¹á" << endl;
+	cout << "è¯·è¾“å…¥æ·»åŠ å­¦ç”Ÿçš„ç±è´¯" << endl;
 	string st_place;
 	cin >> st_place;
 }
 
 void Student::Exit_system() {
-	cout << "»¶Ó­ÏÂ´ÎÊ¹ÓÃ" << endl;
+	cout << "æ¬¢è¿Žä¸‹æ¬¡ä½¿ç”¨" << endl;
 	system("pause");
-	exit(0); //ÍË³ö³ÌÐò
+	exit(0); //é€€å‡ºç¨‹åº
 }
 
 Student::~Student() {
