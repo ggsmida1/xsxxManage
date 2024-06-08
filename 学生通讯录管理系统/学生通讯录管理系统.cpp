@@ -1,33 +1,34 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include"student.h"
+#include<vector>
 using namespace std;
-
+vector<Student> data;
 
 int main() {
 	Student st;
-	int choice = 0; // ÓÃÀ´´¢´æÑ¡Ïî
+	int choice = 0; // ç”¨æ¥å‚¨å­˜é€‰é¡¹
 
+	st.info_read();
 	while (1) {
 		st.Show_Menu();
-		cout << "ÇåÊäÈëÄúµÄÑ¡Ôñ" << endl;
+		cout << "æ¸…è¾“å…¥æ‚¨çš„é€‰æ‹©" << endl;
 		cin >> choice;
 		switch (choice) {
-		case 1: //Ìí¼ÓĞÂÍ¬Ñ§ĞÅÏ¢
+		case 1: //æ·»åŠ æ–°åŒå­¦ä¿¡æ¯
 			st.Add_student();
 			break;
-		case 2: //²éÑ¯Ñ§ÉúĞÅÏ¢
+		case 2: //æŸ¥æ‰¾å­¦ç”Ÿä¿¡æ¯
 			st.Search_student();
 			break;
-		case 3: //ĞŞ¸ÄÑ§ÉúĞÅÏ¢
+		case 3: //æ›´æ”¹å­¦ç”Ÿä¿¡æ¯
 			st.Change_student();
 			break;
-		case 4: //É¾³ıÑ§ÉúĞÅÏ¢
+		case 4: //åˆ é™¤å­¦ç”Ÿä¿¡æ¯
 			st.Erase_student();
 			break;
-		case 5: //ÏÔÊ¾Í¨Ñ¶Â¼ÖĞµÄËùÓĞĞÅÏ¢
+		case 5: //å±•ç¤ºæ‰€æœ‰å­¦ç”Ÿä¿¡æ¯
 			st.Show_student();
-			break;
-		case 6: //ÍË³öÏµÍ³
+		case 6: //é€€å‡ºç³»ç»Ÿ
 			st.Exit_system();
 			break;
 		default:

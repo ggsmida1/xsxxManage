@@ -1,33 +1,36 @@
-#pragma once
-#include<iostream>
-#include<vector>
+ï»¿#pragma once
+#include<string>
 using namespace std;
-vector<Student> data;
 class Student {
-	int st_cnt; //Í³¼ÆÑ§ÉúÈËÊı
-	string st_name; //ĞÕÃû
-	string st_sex; //ĞÔ±ğ
-	string st_year; //³öÉúÄê
-	string st_month; //³öÉúÔÂ
-	string st_day; //³öÉúÈÕ
-	string st_job; //Ö°Îñ
-	string st_place; //¼®¹á
+private:
+	string st_name; //å§“å
+	string st_sex; //æ€§åˆ«
+	string st_year; //å‡ºç”Ÿå¹´
+	string st_month; //å‡ºç”Ÿæœˆ
+	string st_day; //å‡ºç”Ÿæ—¥
+	string st_job; //èŒåŠ¡
+	string st_place; //ç±è´¯
 public:
 	Student();
+	Student(string name,string sex,string year,string month,string day,string job,string place): st_name(name), st_sex(sex), st_year(year), st_month(month), st_day(day), st_job(job), st_place(place){}
+	void Show_Menu(); // æ˜¾ç¤ºèœå•
+
+	void Exit_system(); // é€€å‡ºç³»ç»Ÿ
+
+	void Add_student(); //æ·»åŠ å­¦ç”Ÿ
+
+	void info_write();
 	
-	void Show_Menu(); // ÏÔÊ¾²Ëµ¥
+	void info_read();
 
-	void Exit_system(); // ÍË³öÏµÍ³
+	void Search_student(); // æŸ¥æ‰¾å­¦ç”Ÿä¿¡æ¯
 
-	void Add_student(); //Ìí¼ÓÑ§ÉúĞÅÏ¢
+	void Change_student(); // æ›´æ”¹å­¦ç”Ÿä¿¡æ¯
 
-	void Search_student(vector<Student> &data); //²éÑ¯Ñ§ÉúĞÅÏ¢
+	void Erase_student(); // åˆ é™¤å­¦ç”Ÿä¿¡æ¯
 
-	void Change_student(); //ĞŞ¸ÄÑ§ÉúĞÅÏ¢
+	void Show_student(); // å±•ç¤ºæ‰€æœ‰å­¦ç”Ÿä¿¡æ¯
 
-	void Erase_student(); //É¾³ıÑ§ÉúĞÅÏ¢
-
-	void Show_student(); //ÏÔÊ¾ËùÓĞÑ§ÉúĞÅÏ¢
 	~Student();
 
 };
