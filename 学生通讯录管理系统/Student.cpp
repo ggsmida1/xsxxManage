@@ -48,6 +48,60 @@ void Student::Add_student() {
 
 }
 
+void Student::Search_student(vector<Student> &data) {
+	cout << "请选择您需要查询的方式" << endl;
+	cout << "1.按学号查询" << endl;
+	cout << "2.按姓名查询" << endl;
+	int x;
+	cin >> x;
+	switch (x) {
+	case 1:
+		cout << "请输入您要查询的学生的学号" << endl;
+		int ID;
+		cin >> ID;
+		if (data.size() <= ID) {
+			cout << "没有这号人,请重新操作" << endl;
+			system("pause");
+			system("cls");
+		}
+		else {
+			cout << "姓名: " << data[ID].st_name << endl;
+			cout << "性别: " << data[ID].st_sex << endl;
+			cout << "出生日期: " << data[ID].st_year << ' ' << data[ID].st_month << ' ' << data[ID].st_day << endl;
+			cout << "职位: " << data[ID].st_job << endl;
+			cout << "籍贯: " << data[ID].st_place << endl;
+		}
+		break;
+	case 2:
+		cout << "请输入您要查询的学生的姓名" << endl;
+		string name;
+		cin >> name;
+		for (auto &x : data) {
+			if (x.st_name == name) {
+				cout << "姓名: " << x.st_name << endl;
+				cout << "性别: " << x.st_sex << endl;
+				cout << "出生日期: " << x.st_year << ' ' << x.st_month << ' ' << x.st_day << endl;
+				cout << "职位: " << x.st_job << endl;
+				cout << "籍贯: " << x.st_place << endl;
+				break;
+			} 
+		}
+		cout << ""
+	}
+}
+
+void Student::Change_student() {
+	
+}
+
+void Student::Erase_student() {
+
+}
+
+void Student::Show_student() {
+
+}
+
 void Student::Exit_system() {
 	cout << "欢迎下次使用" << endl;
 	system("pause");

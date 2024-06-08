@@ -19,8 +19,15 @@ public:
 
 	void Exit_system(); // 退出系统
 
-	void Add_student(); //添加学生
+	void Add_student(); //添加学生信息
 
+	void Search_student(vector<Student> &data); //查询学生信息
+
+	void Change_student(); //修改学生信息
+
+	void Erase_student(); //删除学生信息
+
+	void Show_student(); //显示所有学生信息
 	~Student();
 
 };

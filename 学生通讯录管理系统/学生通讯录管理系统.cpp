@@ -16,13 +16,16 @@ int main() {
 			st.Add_student();
 			break;
 		case 2: //查询学生信息
-
+			st.Search_student();
 			break;
 		case 3: //修改学生信息
+			st.Change_student();
 			break;
 		case 4: //删除学生信息
+			st.Erase_student();
 			break;
 		case 5: //显示通讯录中的所有信息
+			st.Show_student();
 			break;
 		case 6: //退出系统
 			st.Exit_system();
