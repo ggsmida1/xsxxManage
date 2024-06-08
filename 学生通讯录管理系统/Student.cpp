@@ -1,5 +1,7 @@
 ﻿#include"student.h";
 #include<string>
+#include<fstream>
+#include<sstream>
 using namespace std;
 Student::Student() {
 
@@ -54,6 +56,34 @@ void Student::Exit_system() {
 	exit(0); //退出程序
 }
 
+void Student::data_write(vector<Student>& data) {
+	ofstream ofs1;
+	ofs1.open("data.txt", ios::out);
+	for (int i = 0; i < data.size(); i++) {
+		ofs1 << data[i].st_cnt << " " << data[i].st_name << " " << data[i].st_sex << " " << data[i].st_year << " " << data[i].st_month << " " << data[i].st_day << " " << data[i].st_job << " " << data[i].st_place << endl;
+	}
+	ofs1.close();
+}
+void Student::data_read(vector<Student>& data) {
+	ifstream ifs1;
+	ifs1.open("data.txt", ios::in);
+	string line;
+	while (getline(ifs1, line)) {
+		istringstream str(line);
+		int st_cnt; //统计学生人数
+		string st_name; //姓名
+		string st_sex; //性别
+		string st_year; //出生年
+		string st_month; //出生月
+		string st_day; //出生日
+		string st_job; //职务
+		string st_place; //籍贯
+		str >> st_cnt >> st_name >> st_sex >> st_year >> st_month >> st_day >> st_job >> st_place;
+		data.push_back(Student(st_cnt, st_name, st_sex, st_year, st_month, st_day, st_job, st_place));
+		
+	}
+	ifs1.close();
+}
 Student::~Student() {
 
 }

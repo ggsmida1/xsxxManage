@@ -1,30 +1,30 @@
-#include<iostream>
+ï»¿#include<iostream>
 #include"student.h"
 using namespace std;
 
 
 int main() {
 	Student st;
-	int choice = 0; // ÓÃÀ´´¢´æÑ¡Ïî
+	int choice = 0; // ç”¨æ¥å‚¨å­˜é€‰é¡¹
 
 	while (1) {
 		st.Show_Menu();
-		cout << "ÇåÊäÈëÄúµÄÑ¡Ôñ" << endl;
+		cout << "æ¸…è¾“å…¥æ‚¨çš„é€‰æ‹©" << endl;
 		cin >> choice;
 		switch (choice) {
-		case 1: //Ìí¼ÓĞÂÍ¬Ñ§ĞÅÏ¢
+		case 1: //æ·»åŠ æ–°åŒå­¦ä¿¡æ¯
 			st.Add_student();
 			break;
-		case 2: //²éÑ¯Ñ§ÉúĞÅÏ¢
+		case 2: //æŸ¥è¯¢å­¦ç”Ÿä¿¡æ¯
 
 			break;
-		case 3: //ĞŞ¸ÄÑ§ÉúĞÅÏ¢
+		case 3: //ä¿®æ”¹å­¦ç”Ÿä¿¡æ¯
 			break;
-		case 4: //É¾³ıÑ§ÉúĞÅÏ¢
+		case 4: //åˆ é™¤å­¦ç”Ÿä¿¡æ¯
 			break;
-		case 5: //ÏÔÊ¾Í¨Ñ¶Â¼ÖĞµÄËùÓĞĞÅÏ¢
+		case 5: //æ˜¾ç¤ºé€šè®¯å½•ä¸­çš„æ‰€æœ‰ä¿¡æ¯
 			break;
-		case 6: //ÍË³öÏµÍ³
+		case 6: //é€€å‡ºç³»ç»Ÿ
 			st.Exit_system();
 			break;
 		default:

@@ -1,25 +1,30 @@
-#pragma once
+ï»¿#pragma once
 #include<iostream>
 #include<vector>
 using namespace std;
 vector<Student> data;
 class Student {
-	int st_cnt; //Í³¼ÆÑ§ÉúÈËÊı
-	string st_name; //ĞÕÃû
-	string st_sex; //ĞÔ±ğ
-	string st_year; //³öÉúÄê
-	string st_month; //³öÉúÔÂ
-	string st_day; //³öÉúÈÕ
-	string st_job; //Ö°Îñ
-	string st_place; //¼®¹á
+private:
+	int st_cnt; //ç»Ÿè®¡å­¦ç”Ÿäººæ•°
+	string st_name; //å§“å
+	string st_sex; //æ€§åˆ«
+	string st_year; //å‡ºç”Ÿå¹´
+	string st_month; //å‡ºç”Ÿæœˆ
+	string st_day; //å‡ºç”Ÿæ—¥
+	string st_job; //èŒåŠ¡
+	string st_place; //ç±è´¯
 public:
 	Student();
+	Student(int cnt,string name,string sex,string year,string month,string day,string job,string place):st_cnt(cnt), st_name(name), st_sex(sex), st_year(year), st_month(month), st_day(day), st_job(job), st_place(place){}
+	void Show_Menu(); // æ˜¾ç¤ºèœå•
+
+	void Exit_system(); // é€€å‡ºç³»ç»Ÿ
+
+	void Add_student(); //æ·»åŠ å­¦ç”Ÿ
 	
-	void Show_Menu(); // ÏÔÊ¾²Ëµ¥
-
-	void Exit_system(); // ÍË³öÏµÍ³
-
-	void Add_student(); //Ìí¼ÓÑ§Éú
+	void data_write(vector<Student>& data);
+	
+	void data_read(vector<Student>& data);
 
 	~Student();
 

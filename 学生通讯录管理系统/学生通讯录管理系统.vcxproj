@@ -131,6 +131,7 @@
     <ClCompile Include="学生通讯录管理系统.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="guanli.h" />
     <ClInclude Include="Student.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
