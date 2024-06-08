@@ -22,7 +22,7 @@ void Student::Show_Menu() {
 void Student::Add_student() {
 	cout << "请输入添加学生的姓名" << endl;
 	//string st_name;
-	cin >> st_name[1];
+	cin >> st_name;
 
 	cout << "请输入添加学生的性别" << endl;
 	string st_sex;
@@ -45,6 +45,7 @@ void Student::Add_student() {
 	cout << "请输入添加学生的籍贯" << endl;
 	string st_place;
 	cin >> st_place;
+
 }
 
 void Student::Exit_system() {
