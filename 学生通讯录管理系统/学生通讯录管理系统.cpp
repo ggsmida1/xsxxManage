@@ -6,12 +6,12 @@ vector<Student> data;
 
 int main() {
 	Student st;
+	
 	int choice = 0; // 用来储存选项
-
 	st.info_read();
 	while (1) {
 		st.Show_Menu();
-		cout << "清输入您的选择" << endl;
+		cout << "请输入您的选择:" << endl;
 		cin >> choice;
 		switch (choice) {
 		case 1: //添加新同学信息
@@ -28,10 +28,13 @@ int main() {
 			break;
 		case 5: //展示所有学生信息
 			st.Show_student();
+			break;
 		case 6: //退出系统
 			st.Exit_system();
 			break;
 		default:
+			cout << "输出选项错误，请重新输入" << endl;
+			system("pause");
 			system("cls");
 			break;
 		}

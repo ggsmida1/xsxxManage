@@ -3,6 +3,7 @@
 using namespace std;
 class Student {
 private:
+	string st_ID; // 学号
 	string st_name; //姓名
 	string st_sex; //性别
 	string st_year; //出生年
@@ -12,7 +13,7 @@ private:
 	string st_place; //籍贯
 public:
 	Student();
-	Student(string name,string sex,string year,string month,string day,string job,string place): st_name(name), st_sex(sex), st_year(year), st_month(month), st_day(day), st_job(job), st_place(place){}
+	Student(string ID,string name,string sex,string year,string month,string day,string job,string place): st_ID(ID), st_name(name), st_sex(sex), st_year(year), st_month(month), st_day(day), st_job(job), st_place(place){}
 	void Show_Menu(); // 显示菜单
 
 	void Exit_system(); // 退出系统
